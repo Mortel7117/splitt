@@ -1,0 +1,28 @@
+.button--cancel { 
+	width: 30px;
+	height: 30px;
+	overflow: hidden;
+	display: block;
+	background-color: var(--cancel);
+	flex-shrink: 0;
+	color: transparent;
+	border-radius: 100%;
+}
+.button--cancel::before,
+.button--cancel::after {
+	width: 60%;
+	height: 3px;
+	position: absolute;
+	content: '';
+	background-color: white;
+	top: calc((100% - 3px) / 2);
+	left: calc((100% - 60%) / 2);
+	border-radius: 5px;
+}
+
+.button-cancel::before{
+	transition: rotate(45deg)
+}
+.button-cancel::after{
+	transition: rotate(-45deg)
+}
